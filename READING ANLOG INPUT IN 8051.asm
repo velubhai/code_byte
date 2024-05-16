@@ -1,0 +1,10 @@
+CLR P0.7
+LOOP:
+MOV P1,A
+ADD A,#20
+CALL Delay
+JMP LOOP
+Delay:
+MOV R0,#2
+DJNZ R0,$
+RET
