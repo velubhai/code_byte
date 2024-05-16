@@ -1,0 +1,37 @@
+org 00h
+MOV A,#0C0h
+MOV P1,A
+CALL delay
+MOV P1,#0F9h
+MOV P1,A
+CALL Delay
+MOV A,#0A4h
+MOV P1,A
+CALL Delay
+MOV P1,#0F9h
+MOV P1,A
+CALL Delay
+MOV A,#0B0h
+MOV P1,A
+CALL Delay
+MOV P1,#99h
+MOV P1,A
+CALL Delay
+MOV A,#92h
+MOV P1,A
+CALL Delay
+MOV P1,#82h
+MOV P1,A
+CALL Delay
+MOV A,#0F8h
+MOV P1,A
+CALL Delay
+MOV P1,#80h
+MOV P1,A
+CALL Delay
+MOV P1,#90h
+MOV P1,A 
+Delay:
+	MOV R0,#2
+	DJNZ R0,$
+	RET
