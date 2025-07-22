@@ -1,0 +1,21 @@
+%{
+#include&lt;stdio.h&gt;
+#include &quot;ar.tab.h&quot;
+int yylval;
+%}
+%%
+[(] {return yytext[0];}
+[)] {return yytext[0];}
+[0-9][0-9]* {yylval=atoi(yytext);
+return ID;
+}
+[0-9][0-9]*/[!/@/#/$/%/^/&amp;/=]* return 0;
+[-+*/] return yytext[0];
+\n return 0;
+[!/@/#/$/%/^/&amp;/=] return 0;
+. return yytext[0];
+%%
+int yywrap()
+{
+return 1;
+}
