@@ -1,0 +1,9 @@
+5000 LDA const1
+5003 ADD const2
+5006 STA temp
+5009 LDA const3
+500C SUB const4
+5015 const1
+5018 const2
+501B const3
+501D const4
