@@ -1,0 +1,54 @@
+Given three distinct integers a b and c, write a C program to find the second
+largest number among them.
+
+Input
+Three distinct integers a b c.
+The first input is the integer a.
+The second input is the integer b.
+The third input is is the integer c.
+
+Output
+The second largest among a, b and c
+
+Note: The assignment evaluation is automated.
+Therefore, do not print (using printf) anything other than the output value.
+
+
+Statements such as printf("Enter the first integer") printf("The second largest integer is %d", val) etc will lead to incorrect output.
+Ideally, the only printf line in the code should be printf("%d",val); Here val can be any variable that stores the output value.
+
+Sample input
+------------------
+ 2 3 1
+
+Sample output
+-------------------
+2
+
+Explanation
+----------------
+2 is the second largest among {2, 3 , 1}.
+1 < 2 and 2 < 3.
+Select the Language for this assignment. 
+C
+
+
+source code
+
+#include <stdio.h>
+int main() {
+   int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    int second;
+    if ((a > b && a < c) || (a > c && a < b)) {
+        second = a;
+    } else if ((b > a && b < c) || (b > c && b < a)) {
+        second = b;
+    } else {
+        second = c;
+    }
+    printf(" %d", second);
+    return 0;
+}
+
+​
